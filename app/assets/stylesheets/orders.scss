@@ -1,20 +1,43 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .image img {
-  width: 200px;
+  width: 100%;
   margin: 0px;
   padding:0px;
 }
 
+.image {
+   width: 15%;
+}
+
 .name {
-   font-size: 210%;
+   font-size: 150%;
 }
 
 .price {
-   font-size: 210%;
+   font-size: 200%;
 }
 
 .description {
-   font-size: 210%;
+   font-size: 100%;
+}
+
+.costumer_field {
+  display: flex;
+}
+
+.listing_field {
+
+}
+
+.qty {
+  width: 50px;
+}
+.actions {
+  background-color: #00308F;
+  width: 100%;
+  text-align: center;
+  font-size: 200%;
 }

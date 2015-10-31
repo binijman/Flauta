@@ -11,32 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :adress %><br>
-    <%= f.text_area :adress %>
-  </div>
-  <div class="field">
-    <%= f.label :postal %><br>
-    <%= f.text_field :postal %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
+<div class= "costumer_field">
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :adress %><br>
+        <%= f.text_area :adress %>
+      </div>
+      <div class="field">
+        <%= f.label :postal %><br>
+        <%= f.text_field :postal %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.text_field :city %>
+      </div>
+</div>
 
-  <h1>Listing Flauta</h1>
+<div class= "listing_field">
+    <h1>Listing Flauta</h1>
 
   <table>
     <thead>
       <tr>
+        <th colspan="1"></th>
         <th>Name</th>
         <th>Price</th>
         <th>Description</th>
-        <th>Image</th>
+        <th class="qty">Quantity to Order</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -50,12 +54,12 @@
             <td class="name"><%= o.object.flautum.name %></td>
             <td class="price"><%= number_to_currency(o.object.flautum.price, unit: "€ ")  %></td>
             <td class="desciption"><%= o.object.flautum.description %></td>
-            <td><%= o.number_field :quantity %></td>
+            <td class="qty"><%= o.number_field :quantity %></td>
           </tr>
         <% end %>
       </tbody>
   </table>
-
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>
