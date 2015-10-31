@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'commenter form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :post %><br>
-    <%= f.text_area :post %>
+    <%= f.text_area :post, :class => 'comment-body form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
-  <div class="actions">
+  <div class="form-group">
     <%= f.submit %>
   </div>
 <% end %>
