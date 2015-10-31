@@ -11,13 +11,23 @@
        en recepten van Peru vinden.</p>
    <!-- </span> -->
    <span class="image30"><%= image_tag("flauta1.jpg") %></span>
-   <span class="box2">
-     U ontvangt uw besteling binnen 24 uur.
-      <%= link_to "Blog", articles_path, class: "koop" %>
-   </span>
    <span class="image30"><%= image_tag("people2.jpg") %></span>
-
+   <hr class="tussenlijn"></hr>
+   <span class="image30">
+     <p>Deze biologische producten komen uit de bergen van Peru.
+     Na uw bestelling ontvangt u de producten binnen 24 uur.</p>
+    <p> Quinoa is geen graan, maar zaad. Het wordt al eeuwenlang geteeld
+    op de koude, droge, winderige hoogvlakten van Peru.
+    Quinoa bevat vrij veel eiwit: ruim 16 procent, bijna dubbel
+    zoveel als tarwe en zilvervliesrijst.</p>
+    <p>Wij bieden ook veel recepten met quinoa zodat je kan ook thuis koken.
+    </p>
+   </span>
+</div>
  <div>
+    <hr class="tussenlijn"></hr>
+   <%= link_to "Blog", articles_path, class: "koop" %>
+   <hr class="tussenlijn"></hr>
    <p>
    De beste verkochte producten van deze maand zijn:
   </p>
@@ -35,7 +45,7 @@
           <p><b>Causa met quinua</b></p>
          <%= image_tag("eten4.jpg") %>
          <p class="koopbox">
-           <%= link_to "Ga naar de webshop", new_order_path, class: "koop" %>
+           <%= link_to "Ga naar de webshop >>", new_order_path, class: "koop" %>
          </p>
        </span>
      </span>
