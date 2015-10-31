@@ -44,6 +44,7 @@ span.beste3 {
 }
 
 a.koop {
+  left:20px;
   color: white;
   border-radius: 10px;
   background-color: #ff9933 ;
@@ -51,4 +52,8 @@ a.koop {
   padding: 5px 10px;
   transition: all 0.5s;
   display: inline-block;
+}
+
+p.koopbox {
+  margin:10px;
 }

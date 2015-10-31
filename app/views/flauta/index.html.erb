@@ -13,8 +13,7 @@
    <!-- </span> -->
    <span class="image30"><%= image_tag("flauta1.jpg") %></span>
    <span class="box2">
-     U ontvang uw besteling binnen 24 uur.
-     <!-- <a class="koop" href="./blog">Blog</a> -->
+     U ontvangt uw besteling binnen 24 uur.
       <%= link_to "Blog", articles_path, class: "koop" %>
    </span>
    <span class="image30"><%= image_tag("people2.jpg") %></span>
@@ -27,21 +26,27 @@
        <span class="image30">
          <p><b>Quinua white</b></p>
          <%= image_tag("quinua white.jpg") %>
-          <p><%= link_to "Ga naar de webshop", new_order_path, class: "koop" %></p>
+          <p class="koopbox">
+            <%= link_to "Ga naar de webshop", new_order_path, class: "koop" %>
+          </p>
        </span>
      </span>
      <span class="beste3">
        <span class="image30">
           <p><b>Causa met quinua</b></p>
          <%= image_tag("eten4.jpg") %>
-         <p><%= link_to "Ga naar de webshop", new_order_path, class: "koop" %></p>
+         <p class="koopbox">
+           <%= link_to "Ga naar de webshop", new_order_path, class: "koop" %>
+         </p>
        </span>
      </span>
      <span class="beste3">
        <span class="image30">
          <p><b>Dulce met quinua</b></p>
          <%= image_tag("eten8.jpg") %>
-         <p><%= link_to "Ga naar de webshop", new_order_path, class: "koop" %></p>
+         <p class="koopbox">
+           <%= link_to "Ga naar de webshop", new_order_path, class: "koop" %>
+         </p>
        </span>
      </span>
  </div>
