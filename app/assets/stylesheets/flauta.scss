@@ -14,9 +14,9 @@
   padding:0px;
 }
 
-.bgimage {
-  background-image:url("orange.jpg");
-}
+// .bgimage {
+//  background-image:url("orange.jpg");
+// }
 span.box2 {
   height:140px;
   width:100px;
@@ -25,7 +25,11 @@ span.box2 {
 
 h1.title {
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
+  border-radius: 10px;
+  background-color: #F5E39D ;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.5s;
 }
 
 .inhoud {

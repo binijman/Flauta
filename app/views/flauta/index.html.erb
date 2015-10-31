@@ -5,28 +5,29 @@
 </div>
 <div class="bgimage"><h1 class="title">Flauta</h1></div>
 <div class="inhoud">
-    <p>Welkom bij Flauta, hier kunt u het beste producten
-       en recepten van Peru vinden.</p>
-   <span class="image30"><%= image_tag("flauta1.jpg") %></span>
+    <h5>Welkom bij Flauta. Al meer dan 20 jaar importeren wij de beste producten uit Peru. <br>
+      Al deze producten kunt u in onze webshop vinden. <br>
+      Ook plaatsen we in onze blog vaak recepten om thuis zelf de lekkerste Peruviaanse maaltijden klaar te kunnen maken. </h5>
+<p> </p>  <span class="image30"><%= image_tag("flauta1.jpg") %></span>
    <span class="image30"><%= image_tag("people2.jpg") %></span>
 </div>
    <hr class="tussenlijn"></hr>
-     <p>Deze biologische producten komen uit de bergen van Peru.
+     <p>Bij ons kunt u de beste quinoa uit de wereld kopen. Onze biologische producten komen uit de bergen van Peru.
      </p>
     <p> Quinoa is geen graan, maar zaad. Het wordt al eeuwenlang geteeld
     op de koude, droge, winderige hoogvlakten van Peru.
     Quinoa bevat vrij veel eiwit: ruim 16 procent, bijna dubbel
     zoveel als tarwe en zilvervliesrijst.
     Quinoa is prima afwisseling voor rijst, pasta of muesli. </p>
-    <p>Wij hebben drie soorten quinoa: zwart,witte en rood.
-      Bovendien bieden wij ook veel recepten waarmee mensen
-      quinoa kan gebruiken.
+    <p>Wij hebben drie soorten quinoa: zwart, witte en rode.
+
     </p>
       <p>Na uw bestelling ontvangt u de producten binnen 24 uur.</p>
 <!-- </div> -->
  <div>
     <hr class="tussenlijn"></hr>
-   <%= link_to "Blog", articles_path, class: "koop" %>
+    <p>Op onze blog schrijven we regelmatig over reizen naar Peru en delen we onze favoriete recepten met jullie.</p>
+   <%= link_to "Klik hier om naar onze blog te gaan", articles_path, class: "koop" %>
    <hr class="tussenlijn"></hr>
    <p>
    De beste verkochte producten van deze maand zijn:
@@ -36,7 +37,7 @@
          <p><b>Quinua white</b></p>
          <%= image_tag("quinua white.jpg") %>
           <p class="koopbox">
-            <%= link_to "Ga naar de webshop", new_order_path, class: "koop" %>
+            <%= link_to "Ga naar de webshop >>", new_order_path, class: "koop" %>
           </p>
        </span>
      </span>
@@ -54,7 +55,7 @@
          <p><b>Dulce met quinua</b></p>
          <%= image_tag("eten8.jpg") %>
          <p class="koopbox">
-           <%= link_to "Ga naar de webshop", new_order_path, class: "koop" %>
+           <%= link_to "Ga naar de webshop >>", new_order_path, class: "koop" %>
          </p>
        </span>
      </span>
