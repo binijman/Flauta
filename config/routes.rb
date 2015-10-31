@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   resources :articles
   resources :users
   resources :flauta

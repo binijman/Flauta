@@ -1,0 +1,63 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :adress %><br>
+    <%= f.text_area :adress %>
+  </div>
+  <div class="field">
+    <%= f.label :postal %><br>
+    <%= f.text_field :postal %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+
+  <h1>Listing Flauta</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= f.fields_for :order_lines do |o| %>
+        <tr>
+          <%= o.hidden_field :flautum_id %>
+          <td><%= image_tag o.object.flautum.image %></td>
+
+
+          <td><%= o.object.flautum.name %></td>
+          <td><%= o.object.flautum.price %></td>
+          <td><%= o.object.flautum.description %></td>
+          <td><%= o.number_field :quantity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @order.adress %>
+</p>
+
+<p>
+  <strong>Postal:</strong>
+  <%= @order.postal %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @order.city %>
+</p>
+
+<table>
+  <tr>
+    <th>Flautum</th>
+    <th>Quantity</th>
+  </tr>
+  <% @order.order_lines.each do |line| %>
+    <tr>
+      <td><%= line.flautum.name %></td>
+      <td><%= line.quantity %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
