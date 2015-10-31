@@ -41,20 +41,19 @@
       </tr>
     </thead>
 
-    <tbody>
-      <%= f.fields_for :order_lines do |o| %>
-        <tr>
-          <%= o.hidden_field :flautum_id %>
-          <td><%= image_tag o.object.flautum.image %></td>
 
-
-          <td><%= o.object.flautum.name %></td>
-          <td><%= number_to_currency(o.object.flautum.price, unit: "€ ")  %></td>
-          <td><%= o.object.flautum.description %></td>
-          <td><%= o.number_field :quantity %></td>
-        </tr>
-      <% end %>
-    </tbody>
+      <tbody>
+        <%= f.fields_for :order_lines do |o| %>
+          <tr>
+            <%= o.hidden_field :flautum_id %>
+            <td class="image"><%= image_tag o.object.flautum.image %></td>
+            <td class="name"><%= o.object.flautum.name %></td>
+            <td class="price"><%= number_to_currency(o.object.flautum.price, unit: "€ ")  %></td>
+            <td class="desciption"><%= o.object.flautum.description %></td>
+            <td><%= o.number_field :quantity %></td>
+          </tr>
+        <% end %>
+      </tbody>
   </table>
 
   <div class="actions">
