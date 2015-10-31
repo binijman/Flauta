@@ -10,20 +10,20 @@
   <%= @article.post %>
 </p>
 
-<p>
+<!-- <p>
   <strong>User:</strong>
   <%= @article.user_id %>
-</p>
+</p> -->
 
-<h2>Comments</h2>
+<h2>Please let us know what you think about this article!</h2>
 <% @article.comments.each do |comment| %>
   <p>
-    <strong>Commenter:</strong>
+    <strong>Your name:</strong>
     <%= comment.commenter %>
   </p>
 
   <p>
-    <strong>Comment:</strong>
+    <strong>Your comments:</strong>
     <%= comment.body %>
   </p>
 <% end %>
@@ -32,11 +32,11 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
     <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, :class => 'commenter' %>
   </p>
   <p>
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :class => 'comment-body' %>
   </p>
   <p>
     <%= f.submit %>
