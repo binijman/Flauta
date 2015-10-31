@@ -1,8 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Flauta</h1>
+<div class="box1">
+  <%= image_tag("peru2.jpg") %>
+  <!-- <h1 class="title">Flauta</h1> -->
+</div>
 
-<table>
+<h1 class="title">Flauta</h1>
+<div class="inhoud">
+  <!-- <span class="info"> -->
+    <p>Welkom bij Flauta, hier kunt u het beste producten
+       en recepten van Peru vinden.</p>
+   <!-- </span> -->
+   <span class="image30"><%= image_tag("flauta1.jpg") %></span>
+   <span class="box2">
+     U ontvang uw besteling binnen 24 uur.
+     <a class="koop" href="./blog">Blog</a>
+   </span>
+   <span class="image30"><%= image_tag("people2.jpg") %></span>
+
+ <div>
+   <p>
+   De beste verkopen producten van deze maand zijn:
+  </p>
+     <span class="beste3">
+       <span class="image30">
+         <p><b>Quinua white</b></p>
+         <%= image_tag("quinua white.jpg") %>
+         <p><a class="koop" href="./shop">Ga naar de webshop</a></p>
+       </span>
+     </span>
+     <span class="beste3">
+       <span class="image30">
+          <p><b>Causa met quinua</b></p>
+         <%= image_tag("eten4.jpg") %>
+         <p><a class="koop" href="./shop">Ga naar de webshop</a></p>
+       </span>
+     </span>
+     <span class="beste3">
+       <span class="image30">
+         <p><b>Dulce met quinua</b></p>
+         <%= image_tag("eten8.jpg") %>
+         <p><a class="koop" href="./shop">Ga naar de webshop</a></p>
+       </span>
+     </span>
+ </div>
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -11,23 +53,21 @@
       <th>Image</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+  <!-- <tbody>
     <% @flauta.each do |flautum| %>
       <tr>
         <td><%= flautum.name %></td>
         <td><%= flautum.price %></td>
         <td><%= flautum.description %></td>
-        <td><%= flautum.image %></td>
+        <td><%= image_tag flautum.image %></td>
         <td><%= link_to 'Show', flautum %></td>
         <td><%= link_to 'Edit', edit_flautum_path(flautum) %></td>
         <td><%= link_to 'Destroy', flautum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
-
+</table> -->
+</div>
 <br>
-
-<%= link_to 'New Flautum', new_flautum_path %>
