@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<h1>
+  <strong>
+  <%= @article.title %></strong>
+</h1>
 
 <p>
-  <strong>Post:</strong>
   <%= @article.post %>
 </p>
 
@@ -14,30 +13,28 @@
   <strong>User:</strong>
   <%= @article.user_id %>
 </p> -->
+</br> </br>
+<h4>Comments section:</h4>
 
-<h2>Please let us know what you think about this article!</h2>
 <% @article.comments.each do |comment| %>
   <p>
-    <strong>Your name:</strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong>Your comments:</strong>
+    <em><%= comment.commenter %>:</em>
     <%= comment.body %>
   </p>
 <% end %>
 
-<h2>Add a comment:</h2>
+</br></br>
+
+<h3>Please let us know what you think about this article!</h3>
 <%= form_for([@article, @article.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter, :class => 'commenter' %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body, :class => 'comment-body' %>
-  </p>
+  <div class="form-group">
+    <%= f.label 'Your name:' %><br>
+    <%= f.text_field :commenter, :class => 'commenter form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Your comment:' %><br>
+    <%= f.text_area :body, :class => 'comment-body form-control' %>
+  </div>
   <p>
     <%= f.submit %>
   </p>
