@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151031114406) do
+=======
+ActiveRecord::Schema.define(version: 20151031095924) do
+>>>>>>> origin/master
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +24,16 @@ ActiveRecord::Schema.define(version: 20151031114406) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
   create_table "flauta", force: :cascade do |t|
     t.string   "name"
