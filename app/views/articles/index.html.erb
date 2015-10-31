@@ -16,7 +16,7 @@
     <% @articles.each do |article| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="title"><%= link_to article.title, article %></td>
-        <td class="text"><%= truncate(article.post, :length => 150, :omission => "... (klik om verder te lezen)") %></td>
+        <td class="text"><%= link_to truncate(article.post, :length => 100, :omission => "... (klik om verder te lezen)") %></td>
         <!-- <td><%= article.user_id %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
