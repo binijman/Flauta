@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>
-  <strong>
-  <%= @article.title %></strong>
+  <%= @article.title %>
 </h1>
 
 <p>
@@ -14,7 +13,7 @@
   <%= @article.user_id %>
 </p> -->
 </br> </br>
-<h4>Comments section:</h4>
+<h5>Comments section:</h5>
 
 <% @article.comments.each do |comment| %>
   <p>
@@ -25,7 +24,7 @@
 
 </br></br>
 
-<h3>Please let us know what you think about this article!</h3>
+<h4>Please let us know what you think about this article!</h4>
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <div class="form-group">
     <%= f.label 'Your name:' %><br>
@@ -40,5 +39,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<!-- <%= link_to 'Edit', edit_article_path(@article) %> | -->
 <%= link_to 'Back', articles_path %>
