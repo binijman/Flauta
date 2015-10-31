@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Flauta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flauta.each do |flautum| %>
+      <tr>
+
+        <td><%= image_tag flautum.image %></td>
+
+
+        <td><%= flautum.name %></td>
+        <td><%= flautum.price %></td>
+        <td><%= flautum.description %></td>
+
+        <td><%= link_to 'Show', flautum %></td>
+        <td><%= link_to 'Edit', edit_flautum_path(flautum) %></td>
+        <td><%= link_to 'Destroy', flautum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flautum', new_flautum_path %>
