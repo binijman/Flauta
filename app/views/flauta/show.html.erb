@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flautum.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @flautum.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flautum.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @flautum.image %>
+</p>
+
+<%= link_to 'Edit', edit_flautum_path(@flautum) %> |
+<%= link_to 'Back', flauta_path %>

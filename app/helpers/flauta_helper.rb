@@ -1,0 +1,2 @@
+module FlautaHelper
+end
