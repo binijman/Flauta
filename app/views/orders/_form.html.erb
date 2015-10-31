@@ -49,7 +49,7 @@
 
 
           <td><%= o.object.flautum.name %></td>
-          <td><%= o.object.flautum.price %></td>
+          <td><%= number_to_currency(o.object.flautum.price, unit: "€ ")  %></td>
           <td><%= o.object.flautum.description %></td>
           <td><%= o.number_field :quantity %></td>
         </tr>
